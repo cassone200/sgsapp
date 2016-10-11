@@ -48,3 +48,20 @@ document.addEventListener("app.Ready", onAppReady, false) ;
 
 // NOTE: change "dev.LOG" in "init-dev.js" to "true" to enable some console.log
 // messages that can help you debug Cordova app initialization issues.
+
+// Wait for Cordova to load
+var db = null;
+
+document.addEventListener('deviceready', function() {
+  db = window.sqlitePlugin.openDatabase({name: 'bd_web.db', location: 'default'});
+        db.transaction(function(tx) {
+            tx.executeSql('SELECT * FROM usuarios WHERE nome = "Thiago" ');
+        }, function(error) {
+            console.log('Transaction ERROR: ' + error.message);
+          }, function() {
+            console.log('Populated database OK');
+          });
+});
+
+
+    

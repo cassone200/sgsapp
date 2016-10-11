@@ -5,7 +5,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "jsapp/template-blank-cordova-project-lite/sample.zip",
       "projectGuid": "a0725df2-1d88-4620-aeb0-8c52ca599b60",
-      "lastModifiedDate": 1476104300367,
+      "lastModifiedDate": 1476206041924,
       "creationDate": 1476102712480
     },
     "XDK-app-designer": "false",
@@ -96,6 +96,27 @@
           ]
         },
         "description": "Cordova Network Information Plugin",
+        "data": {},
+        "dependedBy": []
+      },
+      {
+        "id": "cordova-sqlite-legacy",
+        "name": "Cordova sqlite storage plugin (legacy version)",
+        "version": "1.3.2",
+        "originType": "repo",
+        "origin": "https://github.com/litehelpers/Cordova-sqlite-legacy-build-support.git",
+        "gitref": "1.3.2",
+        "subdir": ".",
+        "paramvals": {},
+        "sourceLocation": "plugins/cordova-sqlite-legacy",
+        "selectedState": "Included",
+        "checksum": "65356711",
+        "dependsOn": [],
+        "topLevel": true,
+        "cordovaVersion": ">=3.0.0",
+        "author": "Litehelpers/Various",
+        "permissions": {},
+        "description": "Native interface to SQLite for PhoneGap/Cordova. Allows you to use more storage and provides more flexibility than the standard Web SQL database (window.openDatabase).",
         "data": {},
         "dependedBy": []
       }
