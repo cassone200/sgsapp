@@ -65,6 +65,14 @@ $('#listar').on('click', function() {
    crossDomain:true,
    success: function(data) {
          console.log(data);
+       
+      
+       
+      for (var i = 0; i < (data.length); i++) {
+            $("#conteudo").append('<div>'+ data[i].nome +'</div>');
+       }
+       
+       
 
    },
    error: function(e) {
