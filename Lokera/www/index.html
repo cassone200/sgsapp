@@ -44,10 +44,10 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.cyan-light_blue.min.css">
 	
-	
+	<script src="js/jquery.js"></script> 
 	<script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls, added during build -->
 	<script src="js/app.js"></script>
-    <script src="js/servico.js"></script>
+    
 	<!-- recommended location of your JavaScript code relative to other JS files -->
 	<script src="xdk/init-dev.js"></script>
 	<!-- normalizes device and document ready events, see README for details -->
@@ -101,7 +101,7 @@
 			</div>
 		</header>
 		<nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-			<a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
+			<a id="listar" class="mdl-navigation__link" href="#"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
 			<a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Aniversários</a>
 			<a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Geral</a>
 		

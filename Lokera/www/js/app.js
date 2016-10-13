@@ -51,17 +51,29 @@ document.addEventListener("app.Ready", onAppReady, false) ;
 
 // Wait for Cordova to load
 var db = null;
+var obj ;
 
-document.addEventListener('deviceready', function() {
-  db = window.sqlitePlugin.openDatabase({name: 'bd_web.db', location: 'default'});
-        db.transaction(function(tx) {
-            tx.executeSql('SELECT * FROM usuarios WHERE nome = "Thiago" ');
-        }, function(error) {
-            console.log('Transaction ERROR: ' + error.message);
-          }, function() {
-            console.log('Populated database OK');
-          });
+
+  $(document).ready(function () {
+
+$('#listar').on('click', function() {
+   
+   $.ajax({
+   type: "POST",
+   url: "http://sgs.hol.es/ws/servico.php?acao=Listar",
+   dataType: "json",
+   crossDomain:true,
+   success: function(data) {
+         console.log(data);
+
+   },
+   error: function(e) {
+     alert('Error: ' + e.message);
+   }
 });
+    
+});
+      });
 
 
     
